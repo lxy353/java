@@ -1,16 +1,32 @@
 Real-world objects contain state and behavior.
+真实世界的对象包含状态和行为。
 A software object's state is stored in fields.
+软件对象的状态存储在字段中。
 A software object's behavior is exposed through methods.
+软件对象的行为通过方法公开。
 Hiding internal data from the outside world, and accessing it only through publicly exposed methods is known as data encapsulation.
+隐藏来自外部世界的内部数据，并且仅通过公开暴露的方法访问它被称为数据封装。
 A blueprint for a software object is called a class.
+软件对象的蓝图称为类
 Common behavior can be defined in a superclass and inherited into a subclass using the extends keyword.
+可以在超类中定义公共行为，并使用extends关键字将其继承到子类中。
 A collection of methods with no implementation is called an interface.
+没有实现的方法集合称为接口
 A namespace that organizes classes and interfaces by functionality is called a package.
+按功能组织类和接口的命名空间称为包。
 The term API stands for Application Programming Interface.
+术语API代表应用程序编程接口。
 The term "instance variable" is another name for non-static field.
+术语“实例变量”是非静态字段的另一个名称。
 The term "class variable" is another name for static field.
+术语“类变量”是静态字段的另一个名称。
 A local variable stores temporary state; it is declared inside a method.
+局部变量存储临时状态;它在方法中声明。
 A variable declared within the opening and closing parenthesis of a method is called a parameter.
+在方法的开括号和右括号内声明的变量称为参数。
 What are the eight primitive data types supported by the Java programming language? byte, short, int, long, float, double, boolean, char
+Java编程语言支持的八种原始数据类型是什么？ 
 Character strings are represented by the class java.lang.String.
+字符串由类java.lang.String表示。
 An array is a container object that holds a fixed number of values of a single type.
+数组是一个容器对象，它包含固定数量的单个类型的值。
