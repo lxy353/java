@@ -1,0 +1,14 @@
+import javax.swing.JOptionPane;
+
+public class Project0{
+     public static void main(String []args){
+         string inputWord;
+         while(true){
+             inputWord = JOptionPane.showinputDialog(null,"Enther a wordl:")
+             if(inputWord.equalsignoreCase("stop")){
+                 System.exit(0);
+             }
+         }
+        System.out.println("Hello World");
+     }
+}
