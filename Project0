@@ -18,7 +18,7 @@ public static void main(String[] args){
         System.exit(0);
       }
 String inputWord = null;
-JOptionPane.showMessageDialog(null, "The Number of E:"+numUp(inputWord)+"\n"+"The Number of e:"+numLow(inputWorld),inputWord, JOptionPane.INFORMATION_MESSAGE);
+JOptionPane.showMessageDialog(null, "The Number of E:"+numUp(inputWord)+"\n"+"The Number of e:"+numLow(inputWorld,"e"),"Message", JOptionPane.INFORMATION_MESSAGE);
     }
   }
 public static int numUp(String Word){
