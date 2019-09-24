@@ -18,7 +18,7 @@ public static void main(String[] args){
      if(userinput.equalsIgnoreCase("STOP")){
         System.exit(0);
       }                                          //if user enters "STOP" ,system exit
-			for(int i=0; i<userinput.length(); i++){   //for loop for finding how many E and e
+			for(int i=0; i<userinput.length(); i++){               //for loop for finding how many E and e
 				if(userinput.charAt(i)=='E'){            
 					uppercase++;                           //if an upper case E is found, add 1 to uppercase to keep count until for loop ends
 				}
@@ -28,7 +28,7 @@ public static void main(String[] args){
 			}
      
      JOptionPane.showMessageDialog(null, "Number of upper case E's: " + uppercase +"\n"+"Number of lower case case e's: "+ lowercase,"Message", JOptionPane.INFORMATION_MESSAGE);
-	//output in a dialog box the result of the numbes of E's and e's that user typed in sentence.
+                                                                               //output in a dialog box the result of the numbes of E's and e's that user typed in sentence.
   }  
 	}
 }
