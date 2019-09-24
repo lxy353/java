@@ -1,3 +1,5 @@
+
+import javax.swing.JOptionPane;
 /**
  * Creater:Xingyu Liu
  * Class session:cs212 11
@@ -8,10 +10,9 @@
   upper-case letter 'E' appears, and how many times the lower-case letter 'e' appears. 
   The key here is to use the charAt method in class String.
  */
-import javax.swing.JOptionPane;
 public class Project0 {  
 public static void main(String[] args){
-    int uppercase = 0, lowercase=0;                                             //set data type
+    int counterE = 0, countere=0;                                             //
 		String userinput;
     while(true){                                                                //while loop
     userinput =JOptionPane.showInputDialog(null,"Please enter a sentence","Input",JOptionPane.QUESTION_MESSAGE);//let user give the input
@@ -20,14 +21,14 @@ public static void main(String[] args){
       }                                          //if user enters "STOP" ,system exit
 			for(int i=0; i<userinput.length(); i++){               //for loop for finding how many E and e
 				if(userinput.charAt(i)=='E'){            
-					uppercase++;                           //if an upper case E is found, add 1 to uppercase to keep count until for loop ends
+					counterE++;                           //if an upper case E is found, add 1 to uppercase to keep count until for loop ends
 				}
 				if(userinput.charAt(i)=='e'){
-					lowercase++;                           //if an upper case e is found, add 1 to uppercase to keep count until for loop ends
+					countere++;                           //if an upper case e is found, add 1 to uppercase to keep count until for loop ends
 				}
 			}
      
-     JOptionPane.showMessageDialog(null, "Number of upper case E's: " + uppercase +"\n"+"Number of lower case case e's: "+ lowercase,"Message", JOptionPane.INFORMATION_MESSAGE);
+     JOptionPane.showMessageDialog(null, "Number of upper case E's: " + counterE +"\n"+"Number of lower case case e's: "+ countere,"Message", JOptionPane.INFORMATION_MESSAGE);
                                                                                //output in a dialog box the result of the numbes of E's and e's that user typed in sentence.
   }  
 	}
