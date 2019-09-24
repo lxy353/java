@@ -4,39 +4,31 @@
  * Lab instructor:Cuiyuan Wang
  * professor:Dr. Kenneth Lord
  * submmit：9/24/2019
+ *The program will examine each letter in the string and count how many time the 
+  upper-case letter 'E' appears, and how many times the lower-case letter 'e' appears. 
+  The key here is to use the charAt method in class String.
  */
 import javax.swing.JOptionPane;
-
-
-public class Project0 {
-  private static final String World = null;
+public class Project0 {  
 public static void main(String[] args){
-    String inputWorld;
-    while(true){
-      inputWorld=JOptionPane.showInputDialog(null,"Please enter a sentence","Input",JOptionPane.QUESTION_MESSAGE);
-      if(inputWorld.equalsIgnoreCase("STOP")){
+    int uppercase = 0, lowercase=0;               //set data type
+		String userinput;
+    while(true){                                  //while loop
+    inputword =JOptionPane.showInputDialog(null,"Please enter a sentence","Input",JOptionPane.QUESTION_MESSAGE);//let user give the input
+     if(userinput.equalsIgnoreCase("STOP")){
         System.exit(0);
-      }
-String inputWord = null;
-JOptionPane.showMessageDialog(null, "The Number of E:"+numUp(inputWord)+"\n"+"The Number of e:"+numLow(inputWorld,"e"),"Message", JOptionPane.INFORMATION_MESSAGE);
-    }
-  }
-public static int numUp(String Word){
-  int count = 0;
-  for(int i=0;i<World.length();i++){
-    if("E".equals(Word.charAt(i)+"")){
-      count++;
-    }
-  }
-  return count;
-  }
-public static int numLow(String Word){
-  int count = 0;
-  for(int i=0;i<World.length();i++){
-    if("e".equals(Word.charAt(i)+"")){
-      count++;
-    }
-}
-  return count;
-}
+      }                                          //if user enters "STOP" ,system exit
+			for(int i=0; i<userinput.length(); i++){   //for loop for finding how many E and e
+				if(userinput.charAt(i)=='E'){            
+					uppercase++;                           //if an upper case E is found, add 1 to uppercase to keep count until for loop ends
+				}
+				if(userinput.charAt(i)=='e'){
+					lowercase++;                           //if an upper case e is found, add 1 to uppercase to keep count until for loop ends
+				}
+			}
+     
+     JOptionPane.showMessageDialog(null, "Number of upper case E's: " + uppercase +"\n"+"Number of lower case case e's: "+ lowercase,"Message", JOptionPane.INFORMATION_MESSAGE);
+	//output in a dialog box the result of the numbes of E's and e's that user typed in sentence.
+  }  
+	}
 }
