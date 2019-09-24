@@ -11,10 +11,10 @@
 import javax.swing.JOptionPane;
 public class Project0 {  
 public static void main(String[] args){
-    int uppercase = 0, lowercase=0;               //set data type
+    int uppercase = 0, lowercase=0;                                             //set data type
 		String userinput;
-    while(true){                                  //while loop
-    inputword =JOptionPane.showInputDialog(null,"Please enter a sentence","Input",JOptionPane.QUESTION_MESSAGE);//let user give the input
+    while(true){                                                                //while loop
+    userinput =JOptionPane.showInputDialog(null,"Please enter a sentence","Input",JOptionPane.QUESTION_MESSAGE);//let user give the input
      if(userinput.equalsIgnoreCase("STOP")){
         System.exit(0);
       }                                          //if user enters "STOP" ,system exit
