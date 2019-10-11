@@ -1,0 +1,115 @@
+public class Question1 {
+
+   /*
+    Question 1.
+      Write a complete main method that does the following:
+      1. Takes 2 command line arguments, both integers.
+      2. If there are not 2 arguments, throw an IllegalArgumentException with an appropriate message.
+      3. Otherwise, output, to the console, the sum and product of those numbers, each on a different line.
+      For example, 
+      C:>java Question2 12 5
+      12 + 5 = 17
+      12 * 5 = 60
+    */
+  public static void main(String[] args) {
+      if (args.length<2)
+         throw new IllegalArgumentException("Requires two command line arguments");
+      int firstNumber = Integer.parseInt(args[0]);
+      int secondNumber = Integer.parseInt(args[1]);
+      int sum = firstNumber+secondNumber;
+      int product = firstNumber*secondNumber;
+      System.out.println(firstNumber+"+"+secondNumber+"="+sum);
+      System.out.println(firstNumber+"*"+secondNumber+"="+product);
+
+   }
+
+}
+public class Question2 {
+
+   /*
+    Question 2.
+      Write the missing method below that will return the sum of a given row in the array.
+      public class Question4{
+      public static void main(String args[]){
+      int arr[][] = {{10, 45}, {2, 42, 67, 5}, {3, 21}};
+      System.out.println(getSumofRow(arr, 1));  //prints the sum of row 1
+      }
+      private static int getSumOfRow (int [][] myArray, int row) {
+      } // getSumOfRow
+      } //main
+ public static void main(String[] args) {
+      int arr[][] = {{10, 45}, {2, 42, 67, 5}, {3, 21}};
+      System.out.println(getSumOfRow(arr, 1));  //prints the sum of row 1
+   }
+   
+      private static int getSumOfRow (int [][] myArray, int row) {
+         int sum = 0;
+         for (int i=0; i<myArray[row].length;i++){
+            sum += myArray[row][i];
+         }
+      return sum;
+      } // getSumOfRow
+
+   }
+
+import javax.swing.*;
+public class Question3 {
+/*
+ * Question 3.
+      Write a Java program that will read a String using a JOptionPane, count the number of characters that are 
+      digits, and display that number in another JOptionPane.  This may make use of the method in the Character 
+      wrapper class called isDigit().
+       */
+public static void main(String args[]){
+      String inputLine = JOptionPane.showInputDialog(null,"Enter a string");
+      int sum = 0;
+      for (int i=0; i<inputLine.length(); i++)
+         if(Character.isDigit(inputLine.charAt(i)))
+            sum++;
+      JOptionPane.showMessageDialog(null, "There are "+sum+" digits.");
+   }
+}
+/*
+  Write a class called Book that contains the following information:
+      1. Instance variables for the title (String), author (String) and price (float) of the book.
+      2. A three-argument constructor to set each of the instance variable above.  If the title or author is null or 
+      the price is less than 0, throw an IllegalArg
+       3. Get and Set methods for each variable
+
+ */
+public class Book {
+   private String title;
+   private String author;
+   private float price;
+   
+   public Book (String t, String a, float p) {
+      if (t==null || a == null || p<0.0f)
+         throw new IllegalArgumentException("Bad parameter to constructor");
+      title = t;
+      author = a;
+      price = p;
+   }
+   public String getTitle() {
+      return title;
+   }
+   public String getAuthor() {
+      return author;
+   }
+   public float getPrice() {
+      return price;
+   }
+   public void setTitle(String t) {
+      if (t==null)
+         throw new IllegalArgumentException("Bad title");
+      title = t;
+   }
+   public void setAuthor(String a) {
+      if (a == null)
+         throw new IllegalArgumentException("Bad author");
+      author = a;
+   }
+   public void setPrice(float p) {
+      if (p<0.0f)
+         throw new IllegalArgumentException("Bad price");
+      price = p;
+   }
