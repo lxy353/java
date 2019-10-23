@@ -10,3 +10,4 @@ d是10进制
 int 的数太大，再最后加L
 把一个数字变成float，后面加f
 byte 1 个字节；short 2个字节；int 4个字节；long 八个字节；float 四个字节，double 八个字节；char 两个字节；bollean 1个字节
+字节转换只可以从低到高（强制转换）加括号，强制转换本身的value没有变化
